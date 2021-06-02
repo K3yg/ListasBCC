@@ -9,6 +9,11 @@ cronológicos e também maiores que 2 anos cronológicos. Seu programa deve exib
 mensagem de erro se o usuário entrar com um número negativo.
 '''
 
-anos_cronologicos = float(input('Insira uma quantidade em anos: '))
+idade = int(input("Inisra a idade do cachorro: "))
 
-anos_caninos = 
+if idade<0:
+    print(f'Dados inválidos!')
+elif idade<=2:
+    print(f'A idade do cachorro é de {idade*10.5} anos.')
+else:
+    print(f'A idade do cachorro é de {2*10.5+idade*4} anos.')

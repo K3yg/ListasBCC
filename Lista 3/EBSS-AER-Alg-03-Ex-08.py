@@ -14,8 +14,6 @@ Comece escrevendo um programa Python que recebe do usuário o nome de uma nota e
 a frequência correspondente. Seu programa deve aceitar todas as notas da tabela acima. 
 
 
-
-
 Uma vez que seu programa esteja funcionando, você deve modificá-lo para suportar todas as notas
 de C0 a C8. Embora isso possa ser feito incluindo um monte de condições de ifs, elifs e else,
 mas isso é extremamente "tosco" e deselegante, e portanto inaceitável como solução deste
@@ -31,5 +29,32 @@ resolver o problema para todas as notas musicais adicionais sem incluir novos ca
 comandos condicionais.
 '''
 
-nome_nota = input('Insira uma nota :')
+nome_nota = input("Insira o nome da nota: ").lower()
+letra = nome_nota[0]
+numero = int(nome_nota[1])
 
+if letra == "a":
+    frequencia = 440.00/2**(4-numero)
+    print(f'A frequencia da nota {nome_nota} é de: {frequencia}Hz')
+
+elif letra == "b":
+    frequencia = 493.88/2**(4-numero)
+    print(f'A frequencia da nota {nome_nota} é de: {frequencia}Hz')
+
+elif letra == "c":
+    frequencia = 261.63/2**(4-numero)
+    print(f'A frequencia da nota {nome_nota} é de: {frequencia}Hz')
+
+elif letra == "d":
+    frequencia = 293.66/2**(4-numero)
+    print(f'A frequencia da nota {nome_nota} é de: {frequencia}Hz')
+
+elif letra == "e":
+    frequencia = 329.63/2**(4-numero)
+    print(f'A frequencia da nota {nome_nota} é de: {frequencia}Hz')
+
+elif letra == "g":
+    frequencia = 392.00/2**(4-numero)
+    print(f'A frequencia da nota {nome_nota} é de: {frequencia}Hz')
+else:
+    print("Não foi possivel encontrar a nota musical escolhida.")

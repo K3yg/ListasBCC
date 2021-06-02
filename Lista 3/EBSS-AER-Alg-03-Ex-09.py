@@ -9,4 +9,32 @@ correspondem a um feriado nacional.
 '''
 
 
-data = input('Insira uma data')
+mes = input("Insira o mês: ").lower()
+dia = int(input("Insira o dia: "))
+
+if dia == 1:
+    if mes == "janeiro":
+        print("Confraternização universal")
+    elif mes == "maio":
+        print("Dia do trabalho")
+
+elif mes == "abril" and dia == 21:
+    print("Tiradentes")
+
+elif mes == "setembro" and dia == 7:
+    print("Independência do Brasil")
+
+elif mes == "outubro" and dia == 12:
+    print("Nossa Senhora Aparecida")
+
+elif mes == "novembro":
+    if dia == 2:
+        print("Finados")
+    if dia == 15:
+        print("Proclamação da República")
+
+elif mes == "dezembro" and dia ==25:
+    print("Natal")
+
+else:
+    print("O dia e o mês informados não correspondem a um feriado nacional.")

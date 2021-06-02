@@ -1,18 +1,18 @@
-'''
-Número de matrícula. Suponha que uma escola utilize, como código de matrícula, um
-número inteiro no formato AASDDD, onde:
-• os dois primeiros dígitos, representados pela letra A, são os dois últimos algarismos do ano
-da matrícula;
-• o terceiro dígitos, representado pela letra S, vale 1 ou 2, conforme o aluno tenha se
-matriculado no 1o ou 2o semestre;
-• os três últimos dígitos, representados pela letra D, correspondem à ordem da matrícula do
-aluno, no semestre e no ano em questão.
-Crie um programa Python que leia o número de matrícula de um aluno e imprima o ano e o
-semestre em que ele foi matriculado. Por exemplo, um número de matrícula 182034 deve
-resultar ano 18 e semestre 2.
-'''
+nome_posicao = input("Me dê a posição da peça: ").lower()
+casa = nome_posicao[0]
+numero = int(nome_posicao[1])
 
-mat = int(input('Insira o número da matrícula: '))
-matri = str(mat)
+if casa == "a" or casa == "c" or casa == "e" or casa == "g":
+    if numero%2 ==0:
+        print("A peça esta na casa branca.")
+    else:
+        print("A peça esta na casa preta.")
 
-print('Ano: {}, semestre: {}'.format(matri[0:2], matri[2]))
+elif casa == "b" or casa == "d" or casa == "f" or casa == "h":
+    if numero%2 ==0:
+        print("A peça esta na casa preta.")
+    else:
+        print("A peça esta na casa branca.")
+
+else:
+    print("Não consegui encontrar a posição pedida.")
